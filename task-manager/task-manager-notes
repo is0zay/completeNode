@@ -1,0 +1,107 @@
+//					URL STRUCTURE
+// Create - POST /tasks
+// Read - GET /tasks
+// READ - GET /tasks/:id 		individual item
+// Update - PATCH	/tasks/:id
+// Delete = DELETE	/tasks/:id
+
+// 					HTTP REQUEST
+// POST	/ tasks HTTP/1.1
+// Accept: application/json
+// Connection: Keep-Alive		- keep running to make requests fast
+// Authorization
+
+// request body {"description": "Order new drill bits"}
+
+//					HTTP RESPONSE
+// HTTP/1.1 201 Creates
+// Date:
+// Server: Express
+// Content-Type: application/json
+
+// response body {_id: ..., "description": "Order new drill bits", "completed": false }
+
+
+
+
+
+
+
+// const User = mongoose.model('User', {
+	// 	name: {
+	// 		type: String,
+	// 		required: true,
+	// 		trim: true
+	// 	},
+	// 	email: {
+	// 		type: String,
+	// 		required: true,
+	// 		trim: true,
+	// 		lowercase: true,
+	// 		validate(value) {
+	// 			if(!validator.isEmail(value)) {
+	// 				throw new Error('Email is invalid')
+	// 			}
+	// 		}
+	// 	},
+	// 	password : {
+	// 		type: String,
+	// 		required: true,
+	// 		trim: true,
+	// 		minLength: 7,
+	// 		validate(value) {
+	// 			if(value.toLowerCase().includes('password')) {
+	// 				throw new Error('Password cannot contain "password"!')
+	// 			}
+	// 		}
+	// 	},
+	// 	age: {
+	// 		type: Number,
+	// 		default: 0,
+	// 		validate(value) {
+	// 			if (value < 0) {
+	// 				throw new Error('Age must be a positive number');
+	// 			}
+	// 		}
+	// 	}
+	// });
+
+// Make instance of User
+// const me = new User({
+// 	name: '   Dylan    ',
+// 	email: 'MYEMAIL@MEAD.IO  ',
+// 	password: 'passWord'
+// });
+
+// Actually save the instance of the user to database
+// me.save().then((result) => {
+// 	console.log(result)
+// }).catch((error) => {
+// 	console.log('Error!', error)
+// })
+
+// TASK CONSTRUCTOR
+// const Task = mongoose.model('Task', {
+// 	description: {
+// 		type: String,
+// 		required: true,
+// 		trim: true
+// 	},
+// 	completed: {
+// 		type: Boolean,
+// 		default: false
+// 	}
+// });
+
+// CREATE NEW TASK
+
+// const firstTask = new Task({
+// 	description: '     Task Manager App     '
+	
+// });
+
+// firstTask.save().then((task) => {
+// 	console.log(task)
+// }).catch((error) => {
+// 	console.log('Error!', error)
+// });
